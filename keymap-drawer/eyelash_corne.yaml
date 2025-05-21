@@ -14,7 +14,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td0'
+  - {t: '$$mdi:backspace$$', type: backspace}
   - A
   - S
   - D
@@ -28,9 +28,9 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
-  - Z
+  - {t: RIGHT GUI, h: ''''}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
   - X
   - C
   - V
@@ -41,14 +41,14 @@ layers:
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - {t: /, h: '$$mdi:apple-keyboard-control$$', s: '?'}
+  - $$mdi:apple-keyboard-shift$$
   - LGUI
   - NUMBER
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - SYMBOL
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-option$$'}
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
