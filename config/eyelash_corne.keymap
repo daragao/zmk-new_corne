@@ -26,6 +26,8 @@
     trigger-period-ms = <16>;
 };
 
+&soft_off { hold-time-ms = <2000>; };
+
 / {
     behaviors {
         td0: td0 {
@@ -50,11 +52,13 @@
         tap-ms = <100>;
     };
 
-    Soft_off: Soft_off {
-        compatible = "zmk,behavior-soft-off";
-        label = "SOFT_OFF";
-        #binding-cells = <0>;
-        hold-time-ms = <3000>;
+    combos {
+        compatible = "zmk,combos";
+
+        softoff {
+            bindings = <&soft_off>;
+            key-positions = <1 15 29>;
+        };
     };
 
     keymap {
@@ -89,8 +93,13 @@
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+<<<<<<< HEAD
 &trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp F13   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                     &Soft_off  &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+=======
+&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+>>>>>>> e5fce13 (Updated eyelash_corne.keymap)
             >;
 
             sensor-bindings = <&scroll_encoder>;
