@@ -11,8 +11,8 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Define your custom aliases here for readability
-#define DISPLAY_SWITCH &kp LG(P)
-#define C_SCRNSHOT     &kp LG(LS(S))
+#define DISPLAY_SWITCH &kp F13
+#define C_SCRNSHOT     &kp F14
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
