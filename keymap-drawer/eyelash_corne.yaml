@@ -141,7 +141,7 @@ layers:
   - '}'
   - '|'
   - '~'
-  - '&Soft_off'
+  - '&soft_off'
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
